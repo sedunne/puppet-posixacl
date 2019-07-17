@@ -1,9 +1,9 @@
 <%- | Hash $acl | -%>
-  <%= $target %>:
-    acl: <%= $acl %>
-    <%- if $recurse { -%>
-    recurse: <%= $recurse %>
+  <%= $acl['target'] %>:
+    acl: <%= $acl['acl'] %>
+    <%- if $acl['recurse'] { -%>
+    recurse: <%= $acl['recurse'] %>
     <%- } -%>
-    <%- if $default { -%>
-    default: <%= $default %>
+    <%- if $acl['default'] { -%>
+    default: <%= $acl['default'] %>
     <%- } -%>
