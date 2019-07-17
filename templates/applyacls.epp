@@ -1,0 +1,22 @@
+<%- | String $globals | -%>
+#!/opt/puppetlabs/puppet/bin/ruby
+## This file is managed by Puppet! Do not modify!
+require 'psych'
+
+setfacl_globals = <%= $globals %>
+
+acl_list = Psych.load_file('/etc/posixacls.yaml')
+acl_list['acls'].each do |target, opts|
+  setfacl_cond_args = []
+  setfacl_cond_args.push('-R') if opts['recurse']
+  setfacl_cond_args.push('-d') if opts['default']
+
+  setfacl_cmd = '/usr/bin/setfacl ' +
+                setfacl_globals + ' ' +
+                setfacl_cond_args.join(' ') +
+                ' -m ' +
+                opts['acl'] +
+                " #{target}"
+
+  system(setfacl_cmd) if File.exist?(target)
+end

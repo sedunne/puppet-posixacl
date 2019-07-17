@@ -12,7 +12,9 @@ class posixacl (
 
   contain posixacl::install
   contain posixacl::aclconfig
+  contain posixacl::script
 
   Class['posixacl::install']
   -> Class['posixacl::aclconfig']
+  -> Class['posixacl::script']
 }
