@@ -1,6 +1,6 @@
 <%- | Hash $acl | -%>
   <%= $acl['target'] %>:
-    acl: <%= $acl['acl'] %>
+    acl: '<%= $acl['acl'] %>'
     <%- if $acl['recurse'] { -%>
     recurse: <%= $acl['recurse'] %>
     <%- } -%>

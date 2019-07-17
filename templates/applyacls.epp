@@ -3,7 +3,7 @@
 ## This file is managed by Puppet! Do not modify!
 require 'psych'
 
-setfacl_globals = <%= $globals %>
+setfacl_globals = '<%= $globals %>'
 
 acl_list = Psych.load_file('/etc/posixacls.yaml')
 acl_list['acls'].each do |target, opts|

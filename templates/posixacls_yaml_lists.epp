@@ -3,7 +3,7 @@ acls:
 <% $acl_list.each |$list, $opts| { -%>
 <% $opts['targets'].each |$target| { -%>
   <%= $target %>:
-    acl: <%= $opts['acl'] %>
+    acl: '<%= $opts['acl'] %>'
     <%- if $opts['recurse'] { -%>
     recurse: <%= $opts['recurse'] %>
     <%- } -%>
