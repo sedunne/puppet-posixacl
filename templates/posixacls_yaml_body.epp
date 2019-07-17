@@ -1,0 +1,11 @@
+<%- | Hash $acl_list | -%>
+<% $acl_list.each |$target, $opts| { -%>
+<%= $target %>:
+  acl: <%= $opts['acl'] %>
+  <%- if defined('$opts["recurse"]') { -%>
+  recurse: <%= $opts['recurse'] %>
+  <%- } -%>
+  <%- if defined('$opts["default"]') { -%>
+  default: <%= $opts['default'] %>
+  <%- } -%>
+<% } -%>
