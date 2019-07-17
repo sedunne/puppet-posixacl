@@ -1,10 +1,10 @@
 ---
-package_name: 'acl'
-package_ensure: 'present'
+posixacl::package_name: 'acl'
+posixacl::package_ensure: 'present'
 
 ## we default to using '-b' to wipe any acl that may not have been set by puppet
-script_globals: '-b'
-script_path: '/usr/local/sbin/applyacls'
-script_owner: 'root'
-script_group: 'root'
-script_mode: '0750'
+posixacl::script_globals: '-b'
+posixacl::script_path: '/usr/local/sbin/applyacls'
+posixacl::script_owner: 'root'
+posixacl::script_group: 'root'
+posixacl::script_mode: '0750'
