@@ -2,7 +2,7 @@
 #
 # @api private
 #
-class posixacl::instal {
+class posixacl::install {
 
   package { $posixacl::package_name:
     ensure => $posixacl::package_ensure
