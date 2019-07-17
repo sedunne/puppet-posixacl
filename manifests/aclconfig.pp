@@ -16,4 +16,10 @@ class posixacl::aclconfig {
     order   => '01',
     content => epp('posixacl/posixacls_yaml_header.epp')
   }
+
+  concat::fragment { 'posixacls_yaml_lists':
+    target  => '/etc/posixacls.yaml',
+    order   => '02',
+    content => epp('posixacl/posixacls_yaml_lists.epp')
+  }
 }

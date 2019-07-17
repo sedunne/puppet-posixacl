@@ -8,3 +8,5 @@ posixacl::script_path: '/usr/local/sbin/applyacls'
 posixacl::script_owner: 'root'
 posixacl::script_group: 'root'
 posixacl::script_mode: '0750'
+
+posixacl::acl_lists: {}

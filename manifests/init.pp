@@ -6,7 +6,8 @@ class posixacl (
   String $script_path,
   String $script_owner,
   String $script_group,
-  String $script_mode
+  String $script_mode,
+  Hash   $acl_lists
 ){
 
   contain posixacl::install
