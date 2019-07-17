@@ -7,7 +7,7 @@ acls:
     <%- if $opts['recurse'] { -%>
     recurse: <%= $opts['recurse'] %>
     <%- } -%>
-    <%- if defined('$opts["default"]') { -%>
+    <%- if $opts['default'] { -%>
     default: <%= $opts['default'] %>
     <%- } -%>
 <% } -%>
