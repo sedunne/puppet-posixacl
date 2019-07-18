@@ -1,4 +1,5 @@
-# @summary Install ACL Package(s)
+# @summary
+#   This class hands installation of ACL package(s)
 #
 # @api private
 #

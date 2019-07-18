@@ -1,4 +1,5 @@
-# @summary Manages building the acl script
+# @summary
+#   This class builds the acl script
 #
 # @api private
 #

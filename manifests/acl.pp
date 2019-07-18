@@ -1,12 +1,23 @@
-# Definition: posixacl::acl
+# @summary
+#   This resource sets a POSIX filesystem ACL on a provided target.
 #
-# Set POSIX filesystem ACL on a target
+# @example Basic usage
+#  posixacl::acl { '/path/to/file':
+#    acl => 'u:someuser:r'
+#  }
 #
-# Parameters:
-#   $target  - The file/directory you want to set an ACL on.
-#   $acl     - The ACL that you want to set on the provided target.
-#   $recurse - If you want the ACL to be recursively applied. Only matters for directories. (Optional)
-#   $default - Whether to set the ACL as default. Only matters for directories. (Optional)
+# @param target
+#   Specifies the file/directory you want to set an ACL on. Defaults to title if not provided.
+#
+# @param acl
+#   Specifies the ACL that you want to set on the target.
+#
+# @param recurse
+#   If you want the ACL to be recursively applied. Only matters for directories.
+#
+# @param default
+#   Whether to mark the ACL as the default. Only matters for directories.
+#
 define posixacl::acl (
   String  $acl,
   String  $target = $title,

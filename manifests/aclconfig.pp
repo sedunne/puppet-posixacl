@@ -1,4 +1,5 @@
-# @summary Manages building the acl yaml config
+# @summary
+#   This class builds the acl yaml config
 #
 # @api private
 #

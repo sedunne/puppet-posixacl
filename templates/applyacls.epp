@@ -1,6 +1,7 @@
 <%- | String $globals | -%>
 #!/opt/puppetlabs/puppet/bin/ruby
 ## This file is managed by Puppet! Do not modify!
+## Script that loads a list of POSIX ACLs to apply to the system
 require 'psych'
 
 setfacl_globals = '<%= $globals %>'
